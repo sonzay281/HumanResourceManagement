@@ -23,7 +23,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>Company</label>
-                <select name="${company.id}" class="form-control" required="required">
+                <select name="company.id" class="form-control" required="required">
                     <option value="">Select Company</option>
                     <c:forEach var="company" items="${companies}">
                         <option value="${company.id}">${company.name}</option>

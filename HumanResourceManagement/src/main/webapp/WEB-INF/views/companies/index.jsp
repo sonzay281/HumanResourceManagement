@@ -35,13 +35,17 @@
                     <button class="btn btn-primary "><span class="glyphicon glyphicon-pencil"></span></button>
                 </a>
                 <a href="${SITE_URL}/companies/delete/${company.id}">
-                    <button class="btn btn-warning"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button class="btn btn-warning" onclick=myFunction();><span class="glyphicon glyphicon-trash" ></span></button>
                 </a>
             </td>
 
         </tr>
     </c:forEach>
 </table>
-
+<script>
+    myFunction(){
+        alert("Hello World!");
+    };
+</script>
 
 <%@include file="../common/footer.jsp" %>

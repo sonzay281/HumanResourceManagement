@@ -51,7 +51,7 @@ public class DemandController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String save(@ModelAttribute("demand") Demand demand) {
+    public String save(@ModelAttribute("Demand") Demand demand) {
         demandRepository.save(demand);
         System.out.println(demand);
         return "redirect:/demands?saved";

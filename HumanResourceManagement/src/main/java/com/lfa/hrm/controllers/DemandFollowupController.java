@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author ZERO BYTE
  */
 @Controller
-@RequestMapping(value = "/demandfollowups")
+@RequestMapping(value = "/demands/followups")
 public class DemandFollowupController {
 
     @Autowired
@@ -35,7 +35,7 @@ public class DemandFollowupController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public @ResponseBody
-    String save(@ModelAttribute("demandFollowup") DemandFollowup demandFollow) {
+    String save(@ModelAttribute("DemandFollowup") DemandFollowup demandFollow) {
 
         demandFolloupRepository.save(demandFollow);
         System.out.println(demandFollow);

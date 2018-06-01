@@ -30,13 +30,13 @@ public class Demand implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private long id;
 
     @Column(name = "openings")
-    private Long openings;
+    private long openings;
 
     @Column(name = "salary")
-    private Long salary;
+    private long salary;
 
     @Column(name = "title")
     private String title;
@@ -48,11 +48,11 @@ public class Demand implements Serializable {
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date deadline;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", insertable=false)
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date createdAt;
     
-    @Column(name = "updated_at")
+    @Column(name = "updated_at",nullable = true)
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date updatedAt;
 
@@ -68,14 +68,8 @@ public class Demand implements Serializable {
     public Demand() {
     }
 
-    public Demand(Long id, Long openings, Long salary, String title, String description, boolean status, Company company) {
+    public Demand(Long id) {
         this.id = id;
-        this.openings = openings;
-        this.salary = salary;
-        this.title = title;
-        this.description = description;
-        this.status = status;
-        this.company = company;
     }
 
     public Long getId() {
